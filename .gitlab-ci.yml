@@ -1,0 +1,33 @@
+before_script:
+  - whoami
+
+stages:
+  - deploy
+
+cache:
+  key: short-igniter-cache
+  paths:
+    - vendor/
+    - node_modules/
+    - public/
+
+deploy:production:
+  stage: deploy
+  environment:
+    name: production
+    url: https://short.phattarachai.dev
+  script:
+    - cd /var/www/html/short-igniter
+
+    - sudo git fetch
+    - sudo git checkout origin/master --force
+
+    - sudo chmod 777 -R writable
+
+    - sudo composer install --no-dev
+
+    - sudo npm install
+    - sudo npm run production
+
+  only:
+    - master
