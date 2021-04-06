@@ -23,9 +23,10 @@ database.default.database = shortigniter_db
 database.default.password = root
 database.default.username = root
 database.default.DBDriver = MySQLi
+
 ```
 
-Run migration
+สร้าง database ตาม config ที่ตั้งแล้ว Run migration
 
 ```
 php spark migrate
