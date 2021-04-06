@@ -125,5 +125,4 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 node_modules
-public/css
 public/js
