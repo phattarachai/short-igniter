@@ -40,6 +40,5 @@ class CreateUrlsTable extends Migration
 
     public function down()
     {
-        //
     }
 }
