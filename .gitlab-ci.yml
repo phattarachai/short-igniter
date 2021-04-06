@@ -26,8 +26,8 @@ deploy:production:
 
     - sudo composer install --no-dev
 
-    - sudo npm install
-    - sudo npm run production
+  #    - sudo npm install
+  #    - sudo npm run production
 
   only:
     - master
