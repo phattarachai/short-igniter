@@ -23,8 +23,6 @@ deploy:production:
     - sudo git checkout origin/master --force
 
     - sudo chmod 777 -R writable
-    - sudo cp .env.production .env
-
 
     - sudo composer install --no-dev
 
