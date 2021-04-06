@@ -25,6 +25,7 @@ deploy:production:
     - sudo chmod 777 -R writable
 
     - sudo composer install --no-dev
+    - sudo php spark migrate
 
   #    - sudo npm install
   #    - sudo npm run production

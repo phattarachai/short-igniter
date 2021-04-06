@@ -17,7 +17,7 @@ class Home extends BaseController
         $url = (new Url)->where('slug', $slug)->first();
 
         if ($url === null) {
-            return redirect()->route('home');
+            return redirect()->to('/');
         }
 
         (new Url)->save([
@@ -47,6 +47,6 @@ class Home extends BaseController
         session()->setFlashdata('url', $url['slug'] ?? $slug);
 
 
-        return redirect()->route('home');
+        return redirect()->to('/');
     }
 }
